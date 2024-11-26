@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Bienvenido a la Página de Inicio</h1>
+<p>Esta es la página de inicio de la aplicación Bebidas Abiertas.</p>
+<p>Tipo de usuario: 
+    {% if is_employee %}
+        Empleado
+    {% elif is_client %}
+        Cliente
+    {% elif is_superuser %}
+        SuperUsuario
+    {% else %}
+        Desconocido
+    {% endif %}
+</p>
+{% endblock %}
